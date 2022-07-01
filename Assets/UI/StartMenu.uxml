@@ -2,8 +2,8 @@
     <Style src="project://database/Assets/UI/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=c3425923ab0ef9b43aefb8e810e36396&amp;type=3#MainMenuStyle" />
     <ui:VisualElement name="MainBackground" style="flex-grow: 1; align-items: center; justify-content: center;">
         <ui:VisualElement class="StandardButton" style="height: 518px; width: 406px; background-color: rgb(255, 255, 255); border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; align-items: center; justify-content: center;">
-            <ui:Button text="Start" display-tooltip-when-elided="true" name="StartButton" style="height: 100px; width: 300px; background-color: rgb(83, 81, 118); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-size: 35px; transform-origin: center;" />
-            <ui:Button text="Button" display-tooltip-when-elided="true" name="OptionButton" class="StandardButton" />
+            <ui:Button text="Start" display-tooltip-when-elided="true" name="StartButton" class="ButtonStyle1" />
+            <ui:Button text="Option" display-tooltip-when-elided="true" name="OptionButton" class="StandardButton ButtonStyle1" style="margin-top: 10px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
