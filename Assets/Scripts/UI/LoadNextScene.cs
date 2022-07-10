@@ -19,6 +19,7 @@ namespace UI
 
         private void LoadScene()
         {
+            GameManager.SetMatchRules(MatchRule.Equal);
             if(nextSceneName != "" )
                SceneManager.LoadScene(nextSceneName);
         }
