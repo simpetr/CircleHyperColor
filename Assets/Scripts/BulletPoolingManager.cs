@@ -25,8 +25,6 @@ public class BulletPoolingManager : MonoBehaviour
             bullet => { bullet.gameObject.SetActive(true); },
             bullet => { bullet.gameObject.SetActive(false); },
             bullet => { Destroy(bullet.gameObject); }, false, _bulletAmount, _bulletAmount + 5);
-
-        
     }
 
     public Bullet RequestBullet()
@@ -34,16 +32,10 @@ public class BulletPoolingManager : MonoBehaviour
         var bullet = _bulletPool.Get();
         bullet.Init(ReturnBullet);
         return bullet;
-
     }
 
     private void ReturnBullet(Bullet bullet)
     {
         _bulletPool.Release(bullet);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

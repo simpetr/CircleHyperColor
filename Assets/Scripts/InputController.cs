@@ -19,8 +19,6 @@ public class InputController : MonoBehaviour
 
         _playerController = _player.GetComponent<PlayerController>();
         var root = GetComponent<UIDocument>().rootVisualElement;
-        if(root == null)
-            Debug.Log("Qualche cosa non va con la UI");
         _redButton = root.Q<Button>("RedButton");
         _blueButton = root.Q<Button>("BlueButton");
         _greenButton = root.Q<Button>("GreenButton");
@@ -32,12 +30,6 @@ public class InputController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }

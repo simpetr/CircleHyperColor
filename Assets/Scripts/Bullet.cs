@@ -5,17 +5,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    
     private Material _material;
     private Color _bulletColor;
     [SerializeField] private float _speed;
 
     private Action<Bullet> _removeBullet;
+
     // Start is called before the first frame update
     void Start()
     {
         _material = GetComponent<Renderer>().material;
-        
     }
 
     // Update is called once per frame
@@ -28,7 +27,9 @@ public class Bullet : MonoBehaviour
     {
         _removeBullet = removeBullet;
     }
-    
+
+    public Color GetColor() => _bulletColor;
+
     public void SetColor(Color color)
     {
         _bulletColor = color;
@@ -37,12 +38,15 @@ public class Bullet : MonoBehaviour
 
     public void SetSpeed(float speed) => _speed = speed;
 
-    public Color GetColor() => _bulletColor;
-
     private void OnTriggerEnter(Collider other)
     {
         //TODO particles
         if (!other.CompareTag("Player")) return;
+        Invoke(nameof(RemoveBullet), 0.2f);
+    }
+
+    private void RemoveBullet()
+    {
         _removeBullet(this);
     }
 }

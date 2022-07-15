@@ -11,7 +11,7 @@ public enum MatchRule
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private static MatchRule _matchRules;
+    [SerializeField] private static MatchRule _matchRule;
     private void Awake()
     {
         DontDestroyOnLoad(this);
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public static void SetMatchRules(MatchRule rule) => _matchRules = rule;
+    public static void SetMatchRules(MatchRule rule) => _matchRule = rule;
 
     /// <summary>
     /// If match is classic return the same color, if the match is Complementary
@@ -34,9 +34,9 @@ public class GameManager : MonoBehaviour
     /// <returns>corrected color</returns>
     public static Color TransformColorBasedOnRules(Color playerColor)
     {
-        if (_matchRules == MatchRule.Equal)
+        if (_matchRule == MatchRule.Equal)
             return playerColor;
-        if (_matchRules == MatchRule.Complementary)
+        if (_matchRule == MatchRule.Complementary)
         {
             return Color.white; //TODO convert color to complementary
         }

@@ -8,8 +8,8 @@ public static class Constants {
     public const int MIN_DISTANCE_BTW_SHOOTER = 20;
     public const int MAX_DISTANCE_BTW_SHOOTER = 135;
     //seconds
-    public const float MIN_DISTANCE_BTW_FIRE = 0.3f;
-    public const float MAX_DISTANCE_BTW_FIRE = 2;
+    public const float MIN_TIME_BTW_FIRE = 0.3f;
+    public const float MAX_TIME_BTW_FIRE = 2;
     //percentage
     public const float MIN_PROB_SAME_COLOR = .05f;
     public const float MAX_PROB_SAME_COLOR = 0.3f;
