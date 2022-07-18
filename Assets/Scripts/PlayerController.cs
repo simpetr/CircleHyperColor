@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -18,12 +19,6 @@ public class PlayerController : MonoBehaviour
         _currentColor = Color.white;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public Color GetCurrentColor() => _currentColor;
 
     public void SetColor(Color color)
@@ -37,7 +32,7 @@ public class PlayerController : MonoBehaviour
         if (!other.CompareTag("Bullet")) return;
  
         var bulletColor = other.gameObject.GetComponent<Bullet>().GetColor();
-        var correctColor = GameManager.TransformColorBasedOnRules(_currentColor);
+        var correctColor = GameDataManager.TransformColorBasedOnRules(_currentColor);
         if (correctColor !=  bulletColor)
         {
             //TODO if wrong color reduce life, update UI, particles

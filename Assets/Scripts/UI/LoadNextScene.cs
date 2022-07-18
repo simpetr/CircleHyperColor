@@ -1,3 +1,4 @@
+using Managers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -19,7 +20,7 @@ namespace UI
 
         private void LoadScene()
         {
-            GameManager.SetMatchRules(MatchRule.Equal);
+            GameDataManager.SetMatchRules(MatchRule.Equal);
             if(nextSceneName != "" )
                SceneManager.LoadScene(nextSceneName);
         }
