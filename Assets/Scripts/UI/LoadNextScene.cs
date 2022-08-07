@@ -20,7 +20,7 @@ namespace UI
 
         private void LoadScene()
         {
-            GameDataManager.SetMatchRules(MatchRule.Equal);
+            GameDataManager.MatchRule = MatchRule.Equal;
             if(nextSceneName != "" )
                SceneManager.LoadScene(nextSceneName);
         }

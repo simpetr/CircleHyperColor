@@ -1,8 +1,16 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Managers
 {
-    
+    public enum Map
+    {
+        Unity,
+        Beach,
+        Forest,
+        City
+    }
     public enum MatchRule
     {
         Equal,
@@ -13,17 +21,27 @@ namespace Managers
     /// </summary>
     public class GameDataManager : MonoBehaviour
     {
-        private static MatchRule _matchRule;
-        //TODO Can be done with a simple string?
-        private static GameObject _selectedMapPrefab;
+        [SerializeField] private  List<GameObject> _mapPrefabs;
+        public static MatchRule MatchRule { get; set; } = MatchRule.Equal;
+        public static Map Map { get; set; } = Map.Unity;
+        
+        private static List<GameObject> _mapPrefabInternal;
         private void Awake()
         {
             DontDestroyOnLoad(this);
         }
 
-        public static void SetMatchRules(MatchRule rule) => _matchRule = rule;
-        public static void SetMap(GameObject map) => _selectedMapPrefab = map;
-
+        private void Start()
+        {
+            _mapPrefabInternal = _mapPrefabs;
+            
+        }
+        
+        public static GameObject GetCurrentMap()
+        {
+            return _mapPrefabInternal[(int)Map];
+        }
+        
         /// <summary>
         /// If match is classic return the same color, if the match is Complementary
         /// return the complementary color of @playerColor. So that the test can be done
@@ -33,14 +51,18 @@ namespace Managers
         /// <returns>corrected color</returns>
         public static Color TransformColorBasedOnRules(Color playerColor)
         {
-            if (_matchRule == MatchRule.Equal)
+            if (MatchRule == MatchRule.Equal)
                 return playerColor;
-            if (_matchRule == MatchRule.Complementary)
+            if (MatchRule == MatchRule.Complementary)
             {
                 return Color.white; //TODO convert color to complementary
             }
 
             return Color.black;
         }
+        
+        
+
+        
     }
 }
