@@ -3,7 +3,7 @@
 
 It's an ongoing Unity mobile hyper casual game based on the colors.
 
-The game will be available on itch.io and open source code.
+The game will be available on my [itch.io](https://simpetr.itch.io) and open source code.
 
 Automatic build through GitHub Action and GameCI
 
@@ -11,7 +11,7 @@ Automatic build through GitHub Action and GameCI
 
 **Not yet available:** GDD document
 
----
+----
 
 
 <br>
