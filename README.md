@@ -7,7 +7,7 @@ The game will be available on itch.io and open source code.
 
 Automatic build through GitHub Action and GameCI
 
-**Project Management: **Codecks
+**Project Management:** Codecks
 
 **Not yet available:** GDD document
 
