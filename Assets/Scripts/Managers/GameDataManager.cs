@@ -26,6 +26,8 @@ namespace Managers
         public static Map Map { get; set; } = Map.Unity;
         
         private static List<GameObject> _mapPrefabInternal;
+        
+        private float _elapsedTime = 0f;
         private void Awake()
         {
             DontDestroyOnLoad(this);
@@ -60,9 +62,21 @@ namespace Managers
 
             return Color.black;
         }
-        
-        
 
-        
+        //
+        // private void Update()
+        // {
+        //     if (_elapsedTime < 30)
+        //     {
+        //         var value = Mathf.Lerp(0, 2.5f, ease(_elapsedTime / 2f));
+        //         Debug.Log(value);
+        //         _elapsedTime += Time.deltaTime;
+        //     }
+        // }
+        //
+        // private float ease(float x)
+        // {
+        //     return x * x * x * x;
+        // }
     }
 }

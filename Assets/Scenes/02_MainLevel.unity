@@ -974,6 +974,7 @@ GameObject:
   - component: {fileID: 1393021605}
   - component: {fileID: 1393021604}
   - component: {fileID: 1393021606}
+  - component: {fileID: 1393021607}
   m_Layer: 0
   m_Name: InstanceManager
   m_TagString: Untagged
@@ -1024,6 +1025,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultMap: {fileID: 3292172825504555545, guid: 1cf4d577192964e439978326486074b5,
+    type: 3}
+--- !u!114 &1393021607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393021603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07da632e6ffb9514cbebe79a58f5c716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirePointPrefab: {fileID: 4210972308956765231, guid: 6e4c8e6672f0b264183d30f60d3df87d,
     type: 3}
 --- !u!1 &1605342725
 GameObject:
