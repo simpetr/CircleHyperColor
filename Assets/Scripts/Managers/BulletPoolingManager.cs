@@ -20,7 +20,12 @@ namespace Managers
         void Start()
         {
             _bulletPool = new ObjectPool<Bullet>(
-                () => Instantiate(_bulletPrefab),
+                () =>
+                {
+                    var bullet = Instantiate(_bulletPrefab);
+                    bullet.Init(ReturnBullet);
+                    return bullet;
+                },
                 bullet => { bullet.gameObject.SetActive(true); },
                 bullet => { bullet.gameObject.SetActive(false); },
                 bullet => { Destroy(bullet.gameObject); }, false, _bulletAmount, _bulletAmount + 5);
@@ -28,9 +33,7 @@ namespace Managers
 
         public Bullet RequestBullet()
         {
-            var bullet = _bulletPool.Get();
-            bullet.Init(ReturnBullet);
-            return bullet;
+            return _bulletPool.Get();
         }
 
         private void ReturnBullet(Bullet bullet)

@@ -51,7 +51,7 @@ namespace Managers
         /// </summary>
         /// <param name="playerColor"></param>
         /// <returns>corrected color</returns>
-        public static Color TransformColorBasedOnRules(Color playerColor)
+        public static Color TransformColorBasedOnRule(Color playerColor)
         {
             if (MatchRule == MatchRule.Equal)
                 return playerColor;

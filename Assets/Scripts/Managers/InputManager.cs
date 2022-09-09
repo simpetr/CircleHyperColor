@@ -8,12 +8,12 @@ namespace Managers
     //CURRENTLY NOT IN USE
     public class InputManager : MonoBehaviour
     {
-        public static InputManager SharedInstance;
+        public static InputManager sharedInstance;
         private TouchInput _touchInput;
         
         private void Awake()
         {
-            SharedInstance = this;
+            sharedInstance = this;
             _touchInput = new TouchInput();
             
         }

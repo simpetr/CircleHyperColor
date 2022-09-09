@@ -41,7 +41,7 @@ namespace Managers
         
         private bool GenerateFireSequence()
         {
-            WaveManager.SharedInstance.SetupFireLocations();
+            WaveManager.sharedInstance.SetupFireLocations();
             return true;
         }
 
@@ -53,7 +53,7 @@ namespace Managers
         
         private void StartGame()
         {
-            WaveManager.SharedInstance.StartWaveSequence();
+            WaveManager.sharedInstance.StartWaveSequence();
         }
     }
 }

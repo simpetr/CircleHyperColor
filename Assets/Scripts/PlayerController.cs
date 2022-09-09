@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         if (!other.CompareTag("Bullet")) return;
  
         var bulletColor = other.gameObject.GetComponent<Bullet>().GetColor();
-        var correctColor = GameDataManager.TransformColorBasedOnRules(_currentColor);
+        var correctColor = GameDataManager.TransformColorBasedOnRule(_currentColor);
         if (correctColor !=  bulletColor)
         {
             //TODO if wrong color reduce life, update UI, particles
