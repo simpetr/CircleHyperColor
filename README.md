@@ -3,11 +3,11 @@
 
 It's an ongoing Unity mobile hyper casual game based on the colors.
 
-The game will be available on my [itch.io](https://simpetr.itch.io) and open source code.
+The game will be available on my [itch.io](https://simpetr.itch.io) and open source.
 
 Automatic build through GitHub Action and GameCI
 
-**Project Management:** Codecks
+**Project Management:** Codecks - Check for progress at: https://open.codecks.io/circlehypercolor
 
 **Not yet available:** GDD document
 
