@@ -9,7 +9,7 @@ Automatic build through GitHub Action and GameCI
 
 **Project Management:** Codecks - Check for progress at: https://open.codecks.io/circlehypercolor
 
-**Not yet available:** GDD document
+**GDD document (Draft):**: https://github.com/simpetr/CircleHyperColor/wiki/Circle-Hyper-Color---Design-Document
 
 ----
 
